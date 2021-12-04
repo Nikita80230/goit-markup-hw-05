@@ -17,6 +17,7 @@ body {
   color: var(--text-color);
   background-color: var(--second-title-color);
   letter-spacing: 0.02em;
+  padding-top: 80px;
 }
 .list {
   list-style: none;
@@ -234,7 +235,6 @@ ul {
   padding-top: 200px;
   padding-bottom: 200px;
   margin: 0 auto;
-  margin-top: 80px;
 }
 
 .hero-title {
@@ -773,9 +773,14 @@ ul {
   margin-left: 30px;
   text-align: start;
   flex-basis: calc((100% - 90px) / 3);
+
+  transition-property: box-shadow;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--function);
 }
-.project-link:focus,
-.project-link:hover,
+/* .project-link:focus,
+.project-link:hover, */
+.project:focus-within,
 .project:focus,
 .project:hover {
   box-sizing: border-box;
@@ -784,8 +789,10 @@ ul {
 }
 
 .project:focus .project-info,
-.project:hover .project-info {
+.project:hover .project-info,
+.project:focus-within .project-info {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .projects-text {
@@ -816,8 +823,9 @@ ul {
 
   height: 294px;
   transform: translateY(101%);
-  transition-property: opacity;
-  transition: transform var(--duration);
+  opacity: 1;
+  transition: transform;
+  transition-duration: var(--duration);
   transition-timing-function: var(--function);
   overflow-y: auto;
 }
