@@ -705,10 +705,6 @@ ul {
   /*font-family: "Roboto", "sans-serif";
 } */
 
-.filters {
-  margin-top: 80px;
-}
-
 .filters-list {
   display: flex;
   justify-content: center;
@@ -798,6 +794,7 @@ ul {
 .projects-text {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: 0;
 }
 
 .project-info-wrap {
@@ -869,9 +866,9 @@ ul {
   transition: opacity 250ms, visibility 250ms;
 }
 
-.backdrop.is-hidden .modal {
+/* .backdrop.is-hidden .modal {
   transform: scale(10);
-}
+} */
 
 .modal {
   width: 528px;
